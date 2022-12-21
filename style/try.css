@@ -15738,6 +15738,7 @@ html.overflow-y-hidden {
 }
 .container {
   width: 100%;
+
  
 }
 @media (min-width: 960px) {
@@ -31374,12 +31375,12 @@ html, body {
 }
 .bg {
   /* The image used */
-  --page-background-image: url("/img/bg.png");
+
   --page-background-alignment: left;
   min-height: 100vh;
   height: fit-content;
-    background-color: #000;
-    background-image: url("/img/bg.png");
+   
+   
     background-position: 50%;
     background-size: cover;
 }
