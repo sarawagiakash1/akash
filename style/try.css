@@ -18234,10 +18234,11 @@ x:-o-prefocus {
   border-radius: 3px;
   border-style: solid;
   border-width: 1px;
-  height: auto;
+  height: 80%;
   margin: 10% !important;
   width: 400px;
   min-width: 300px;
+  position: absolute;
 }
 #okta-sign-in:focus {
   outline: none;
