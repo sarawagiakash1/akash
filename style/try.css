@@ -18239,6 +18239,7 @@ x:-o-prefocus {
   width: 400px;
   min-width: 300px;
   position: absolute;
+  overflow: auto;
 }
 #okta-sign-in:focus {
   outline: none;
