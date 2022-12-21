@@ -18234,9 +18234,9 @@ x:-o-prefocus {
   border-radius: 3px;
   border-style: solid;
   border-width: 1px;
-  max-height: 80%;
-  margin: 10% !important;
-  width: 400px;
+  /* max-height: 80%; */
+  margin: 4% !important;
+  width: 31%;
   min-width: 300px;
   position: absolute;
   overflow: auto;
@@ -31370,9 +31370,9 @@ span > input[type="radio"] {
 }
 
 html, body {
-  margin:0;
-  height:100%;
-  overflow:hidden;
+  margin: 0;
+  height: 100%;
+  overflow: auto;
 }
 .bg {
   /* The image used */
@@ -31387,6 +31387,8 @@ html, body {
 }
 
 #okta-sign-in.auth-container .button-primary, #okta-sign-in.auth-container .button-primary:active, #okta-sign-in.auth-container .button-primary:focus {
-  background: #1e21ce !important;
+  background:transparent !important;
 
 }
+
+
