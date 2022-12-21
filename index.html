@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Simple Web Page</title>
+    <style>
+      /* h1 {
+        margin: 2em 0;
+      } */
+
+      
+    </style>
+    <!-- widget stuff here -->
+    <script src="https://global.oktacdn.com/okta-signin-widget/7.0.3/js/okta-sign-in.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js" integrity="sha512-+gShyB8GWoOiXNwOlBaYXdLTiZt10Iy6xjACGadpqMs20aJOoh+PJt3bwUVA6Cefe7yF7vblX6QwyXZiVwTWGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <!-- <link href="https://global.oktacdn.com/okta-signin-widget/7.0.3/css/okta-sign-in.min.css" type="text/css" rel="stylesheet"/> -->
+<link rel="stylesheet" href="style/try.css"  />
+
+</head>
+  <body>
+    <div class="bg">
+      <div class="container">
+        <h1 class="text-center">Simple Web Page</h1>
+        <div id="messageBox" class="">
+          You are not logged in.
+        </div>
+        <!-- where the sign-in form appears -->
+        
+        <div id="okta-login-container"></div>
+        <button id="logout" class="button" onclick="logout()" style="display: none">Logout</button>
+      </div>
+    </div>
+   
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var oktaConfig = {
+        issuer: "https://dev2-alcon-axon.oktapreview.com/oauth2/default",
+        redirectUri: 'http://localhost:8080/',
+        clientId: "0oa5kjknwg1inWJrD1d7",
+        flow: 'login',
+        logo: '/img/Alcon_RGB_Tag1.png',
+        colors: {
+        brand: '#1e21ce'
+      },
+      language: 'en',
+      useInteractionCodeFlow:true,
+      registration:{parseSchema: (schema, onSuccess) => {
+  // This example will add an additional field to the registration form.
+  // schema.push(
+  //   {
+  //     'name': 'oidc_client.street_address',
+  //     'type': 'text',
+  //     'placeholder': 'Enter your street address',
+  //     'maxLength': 255,
+  //     'label-top': true,
+  //     'label': 'Street Address',
+  //     'required': true,
+  //   }
+  // );
+  onSuccess(schema);
+},
+  preSubmit: (postData, onSuccess, onFailure) => {
+      // handle preSubmit callback
+      
+      //return false;
+      onSuccess(postData);
+  },
+  postSubmit: (response, onSuccess, onFailure) => {
+      // handle postsubmit callback
+      onSuccess(response);
+  }
+},
+      };
+      // Search for URL Parameters to see if a user is being routed to the application to recover password
+      var searchParams = new URL(window.location.href).searchParams;
+      oktaConfig.otp = searchParams.get('otp');
+      oktaConfig.state = searchParams.get('state');
+
+     const oktaSignIn = new OktaSignIn(oktaConfig);
+
+      oktaSignIn.authClient.token.getUserInfo().then(function(user) {
+        document.getElementById("messageBox").innerHTML = "Hello, " + user.email + "! You are *still* logged in! :)";
+        document.getElementById("logout").style.display = 'block';
+      }, function(error) {
+        oktaSignIn.showSignInToGetTokens({
+          el: '#okta-login-container'
+        }).then(function(tokens) {
+          oktaSignIn.authClient.tokenManager.setTokens(tokens);
+          oktaSignIn.remove();
+
+          const idToken = tokens.idToken;
+          document.getElementById("messageBox").innerHTML = "Hello, " + idToken.claims.email + "! You just logged in! :)";
+          document.getElementById("logout").style.display = 'block';
+
+        }).catch(function(err) {
+          console.error(err);
+        });
+      });
+
+      oktaSignIn.on('afterRender', function (context) {
+ //alert($(".o-form-fieldset-container").html()); 
+ //var input = document.querySelector('[name="userProfile.mobilePhone"]');
+ //intlTelInput(input, {
+    // any initialisation options go here
+//});
+});
+
+      function logout() {
+        oktaSignIn.authClient.signOut();
+        location.reload();
+      }
+      });
+     
+      
+    </script>
+  </body>
+</html>
