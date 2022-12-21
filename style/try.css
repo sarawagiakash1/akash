@@ -18235,7 +18235,7 @@ x:-o-prefocus {
   border-style: solid;
   border-width: 1px;
   height: auto;
-  margin: 10%;
+  margin: 10% !important;
   width: 400px;
   min-width: 300px;
 }
