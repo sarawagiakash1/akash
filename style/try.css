@@ -25982,7 +25982,6 @@ x:-o-prefocus {
 #okta-sign-in.auth-container.main-container {
   font-family: proxima nova, montserrat, Arial, Helvetica, sans-serif;
   color: #777;
-  overflow: visible;
   border-radius: 36px;
   
 }
