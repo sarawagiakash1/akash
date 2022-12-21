@@ -1,0 +1,25 @@
+
+   .Consent{
+    height: max-content;
+    display: inline-block;
+    border: none !important;
+    margin-bottom: 0;
+  }
+
+  .Consent a{
+    text-decoration: underline !important;
+    color: #007dc1 !important; 
+  }
+  .Consent input[type="checkbox"]{
+    margin-right: 10px !important;
+  }
+
+  .Consent + .okta-form-input-error.o-form-input-error.o-form-explain {
+    display: none !important;
+  }
+
+  .Consent .alignLabel{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+  }

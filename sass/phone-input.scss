@@ -1,0 +1,57 @@
+.iti {
+  height: 100%;
+  width: 100%;
+
+  &__flag {
+    background-image: url("../img/flags.png") !important;
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    &__flag {
+      background-image: url("../img/flags@2x.png") !important;
+    }
+  }
+
+  &__arrow {
+    margin-left: 6px !important;
+    border-left: 3px solid transparent !important;
+    border-right: 3px solid transparent !important;
+    border-top: 4px solid #555 !important;
+  }
+
+  &__selected-flag {
+    padding: 0 6px 0 8px !important;
+  }
+
+  &__country-list {
+    padding: 0 !important;
+    margin: 0 0 0 -1px !important;
+    background-color: white !important;
+    border: 1px solid #CCC !important;
+  }
+
+  &__country.iti__highlight {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+  }
+
+  &__country {
+    padding: 5px 10px !important;
+    outline: none !important;
+  }
+
+  &__flag-box, &__country-name {
+    margin-right: 6px !important;
+  }
+
+  &--allow-dropdown input {
+    padding-right: 6px !important;
+    padding-left: 52px !important;
+    margin-left: 0;
+  }
+
+  &__divider {
+    padding-bottom: 5px !important;
+    margin-bottom: 5px !important;
+    border-bottom: 1px solid #CCC !important;
+  }
+}
