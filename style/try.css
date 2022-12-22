@@ -31387,7 +31387,7 @@ html, body {
 }
 
 #okta-sign-in.auth-container .button-primary, #okta-sign-in.auth-container .button-primary:active, #okta-sign-in.auth-container .button-primary:focus {
-  background:transparent !important;
+  background: #003595 !important;
 
 }
 
