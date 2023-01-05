@@ -18949,9 +18949,9 @@ x:-o-prefocus {
   content: "\e030";
   color: #4cbf9c;
 }
-#okta-sign-in .visibility-16:before {
-  content: "\e022";
+#okta-sign-in .visibility-16:before { 
   color: #a7a7a7;
+  content: "\1f441";
 }
 #okta-sign-in .visibility-off-16:before {
   content: "\e0c3";
@@ -24314,6 +24314,7 @@ x:-o-prefocus {
 }
 #okta-sign-in .siw-main-view .custom-checkbox label {
   line-height: inherit;
+  padding-top: 7px;
 }
 #okta-sign-in .siw-main-view .o-form-explain.o-form-input-error {
   word-break: normal;
