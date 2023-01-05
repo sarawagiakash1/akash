@@ -24310,6 +24310,7 @@ x:-o-prefocus {
 #okta-sign-in .siw-main-view .custom-checkbox {
   width: -webkit-max-content;
   width: max-content;
+  padding-top: 10px;
 }
 #okta-sign-in .siw-main-view .custom-checkbox label {
   line-height: inherit;
