@@ -19228,7 +19228,7 @@ x:-o-prefocus {
   color: #f1d10d;
 }
 #okta-sign-in .error-16:before {
-  content: "\e055";
+  content: "\26A0";
   color: #fff;
 }
 #okta-sign-in .error-16-red:before,
