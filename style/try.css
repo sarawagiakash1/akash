@@ -18950,8 +18950,9 @@ x:-o-prefocus {
   color: #4cbf9c;
 }
 #okta-sign-in .visibility-16:before { 
-  color: #a7a7a7;
-  content: "\1f441";
+  font: var(--fa-font-regular);
+  padding-top: 10px;
+  content: '\f06e';
 }
 #okta-sign-in .visibility-off-16:before {
   content: "\e0c3";
@@ -18962,9 +18963,11 @@ x:-o-prefocus {
   color: #5e5e5e;
 }
 #okta-sign-in .cancel-16-small:before,
-#okta-sign-in .cancel-16:before {
-  content: "\e02b";
+#okta-sign-in .cancel-16:before { 
   color: #5e5e5e;
+  content: '\f070';
+  font: var(--fa-font-regular);
+  padding-top: 10px;
 }
 #okta-sign-in .cancel-16-disabled:before,
 #okta-sign-in .cancel-16-small-disabled:before {
