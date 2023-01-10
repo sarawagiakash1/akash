@@ -28349,7 +28349,7 @@ only screen and (min-resolution:2dppx) {
 only screen and (min-device-pixel-ratio:2),
 only screen and (min-resolution:2dppx) {
     #okta-sign-in .custom-checkbox label {
-        background-image: url(../img/checkbox-sign-in-widget@2x.c8c02700.png);
+        background-image: url(../img/checkbox-sign-in-widget@2x.png);
         background-size: 50px 1155px
     }
 }
@@ -32036,7 +32036,7 @@ only screen and (min-resolution:2dppx) {
 only screen and (min-device-pixel-ratio:2),
 only screen and (min-resolution:2dppx) {
     .custom-checkbox label {
-        background-image: url(../img/checkbox-sign-in-widget@2x.c8c02700.png);
+        background-image: url(../img/checkbox-sign-in-widget@2x.png);
         background-size: 50px 1155px
     }
 }
