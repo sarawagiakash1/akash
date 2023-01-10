@@ -18949,9 +18949,9 @@ x:-o-prefocus {
   content: "\e030";
   color: #4cbf9c;
 }
-#okta-sign-in .visibility-16:before {
-  content: "\e022";
+#okta-sign-in .visibility-16:before { 
   color: #a7a7a7;
+  content: "\1f441";
 }
 #okta-sign-in .visibility-off-16:before {
   content: "\e0c3";
@@ -19228,13 +19228,13 @@ x:-o-prefocus {
   color: #f1d10d;
 }
 #okta-sign-in .error-16:before {
-  content: "\e055";
+  content: "\26A0";
   color: #fff;
 }
 #okta-sign-in .error-16-red:before,
 #okta-sign-in .error-16-small:before {
-  content: "\e055";
   color: #e34843;
+  content: '\26A0';
 }
 #okta-sign-in .success-16:before {
   content: "\e051";
@@ -22281,6 +22281,7 @@ x:-o-prefocus {
 #okta-sign-in .o-form label,
 #okta-sign-in .o-form textarea {
   font-size: 14px;
+  padding-top: 20px;
 }
 #okta-sign-in .o-form .o-form-label {
   font-weight: 400;
@@ -24309,9 +24310,11 @@ x:-o-prefocus {
 #okta-sign-in .siw-main-view .custom-checkbox {
   width: -webkit-max-content;
   width: max-content;
+  padding-top: 10px;
 }
 #okta-sign-in .siw-main-view .custom-checkbox label {
   line-height: inherit;
+  padding-top: 7px;
 }
 #okta-sign-in .siw-main-view .o-form-explain.o-form-input-error {
   word-break: normal;
@@ -26005,6 +26008,7 @@ x:-o-prefocus {
 }
 #okta-sign-in.auth-container .o-form-explain.okta-form-input-error {
   padding-top: 25px;
+  margin-bottom: -20px;
 }
 #okta-sign-in.auth-container .link,
 #okta-sign-in.auth-container .link:active,
@@ -31374,21 +31378,40 @@ html, body {
   height: 100%;
   overflow: auto;
 }
-.bg {
-  /* The image used */
 
-  --page-background-alignment: left;
-  min-height: 100vh;
-  height: fit-content;
-   
-   
-    background-position: 50%;
-    background-size: cover;
-}
 
 #okta-sign-in.auth-container .button-primary, #okta-sign-in.auth-container .button-primary:active, #okta-sign-in.auth-container .button-primary:focus {
   background: #003595 !important;
-
+  padding: 5px;
 }
 
+.bg1 {
+  /* The image used */
+  --page-background-image: url("/img/bg.png");
+  --page-background-alignment: left;
+  
+    height:100vh;
+    background-color: #000;
+    background-image: url("/img/bg.png");
+    background-position: 50%;
+    background-size: cover;
+}
+.bg2{
+  --page-background-image: url("/img/bg.png");
+  --page-background-alignment: left;
+  background-attachment: fixed;
 
+    height: 100vh;
+    background-image: url("/img/bg.png");
+    /* height: fit-content; */
+    /* background-position: 50%; */
+    background-size: cover;
+}
+.bg{
+  background-image: url("/img/bg.png");
+min-height: 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+}
