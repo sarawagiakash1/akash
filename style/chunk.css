@@ -27870,7 +27870,7 @@ only screen and (min-resolution:2dppx) {
 #okta-sign-in a:link,
 #okta-sign-in a:visited {
     text-decoration: none;
-    color: #777
+    color: #003593!important;
 }
 
 #okta-sign-in a:focus,
