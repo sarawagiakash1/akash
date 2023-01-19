@@ -47,7 +47,7 @@
         colors: {
         brand: '#1e21ce'
       },
-      language: 'en',
+      //language: 'en',
       useInteractionCodeFlow:true,
       registration:{parseSchema: (schema, onSuccess) => {
   // This example will add an additional field to the registration form.
@@ -104,10 +104,10 @@
 
       oktaSignIn.on('afterRender', function (context) {
  //alert($(".o-form-fieldset-container").html()); 
- //var input = document.querySelector('[name="userProfile.mobilePhone"]');
- //intlTelInput(input, {
-    // any initialisation options go here
-//});
+ var input = document.querySelector('[name="userProfile.mobilePhone"]');
+ intlTelInput(input, {
+    //any initialisation options go here
+});
 });
 
       function logout() {
