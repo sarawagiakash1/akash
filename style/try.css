@@ -21309,7 +21309,7 @@ x:-o-prefocus {
 }
 #okta-sign-in .custom-checkbox label,
 #okta-sign-in .custom-radio label {
-  display: block;
+  /* display: block; */
   position: relative;
   line-height: 16px;
   margin: 0;
