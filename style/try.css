@@ -24308,9 +24308,9 @@ x:-o-prefocus {
   float: right;
 }
 #okta-sign-in .siw-main-view .custom-checkbox {
-  width: -webkit-max-content;
+  /* width: -webkit-max-content;
   width: max-content;
-  padding-top: 10px;
+  padding-top: 10px; */
 }
 #okta-sign-in .siw-main-view .custom-checkbox label {
   line-height: inherit;

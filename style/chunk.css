@@ -30311,8 +30311,8 @@ only screen and (min-resolution:2dppx) {
 }
 
 #okta-sign-in .siw-main-view .custom-checkbox {
-    width: -webkit-max-content;
-    width: max-content
+    /* width: -webkit-max-content;
+    width: max-content */
 }
 
 #okta-sign-in .siw-main-view .custom-checkbox label {
